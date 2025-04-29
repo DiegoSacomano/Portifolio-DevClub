@@ -1,0 +1,262 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth; /* comportamento do scroll, smooth fica mais suave*/
+}
+
+body {
+    background-color: #0f172a;
+    color: #e2e8f0;
+   
+}
+
+
+/*SESSÃO DE NAVEGAÇÃO ..........*/
+
+.navegacao {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 60px;
+    background-color: rgba(15, 23, 42, 0.8);
+    z-index: 100; /* define quem fica na frente de quem, no caso queremos que fique a frente*/
+    padding: 1.5rem;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    list-style: none;
+    
+}
+
+.menu-link {
+    color: #e2e8f0;
+    text-decoration: none;
+    padding: 0.5rem 0;
+    font-weight: 500;
+    position: relative;
+}
+
+.menu-link::after { /* adiciona algo depois do item*/
+    content: "";
+    height: 2px;
+    width: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(90deg, #4f46e5, #7c3aed);
+    transition: width 0.5s ease;
+}
+
+.menu-link:hover::after { /* efeito de hover no width 0 foi pra 100%*/
+    width: 100%;
+}
+
+
+/*SESSÃO DE INICIO...........*/
+
+.cabecalho {
+    min-height: 100vh; /*quero que ele ocupe 100% da altura da tela*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.foto-perfil {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(79, 70, 229, 0.3);
+    border: 4px solid rgba(255, 255, 255, 0.1);
+    animation: flutuar 5s ease-in-out infinite;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #4f46e5;
+    margin: 20px 0;
+}
+
+.sub-titulo {
+    font-size: 1.5rem;
+    color: #e2e8f0;
+    font-weight: 600;
+}
+
+/*SESSÃO DO SOBRE ...........*/
+
+.sobre {
+    padding: 6rem 2rem;
+}
+
+.sobre-titulo {
+    font-size: 3rem;
+    text-align: center;
+    margin: 30px;
+}
+
+.sobre-caixa {
+   max-width: 600px; /* maximo que vai ocupar de largura é 600px nao passa disso*/
+   padding: 2rem;
+   margin: 0 auto; /*centraliza a caixa do texto*/
+   border-radius: 10px;
+   border: 1px solid rgba(255, 255, 255, 0.1);
+   backdrop-filter: blur(10px); /*efeito esfumaçado*/
+   background: rgba(255, 255, 255, 0.05);
+}
+
+.sobre-paragrafo {
+    
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+/*SESSÃO DE PROJETOS ...........*/
+
+.projetos {
+    padding: 6rem 2rem;
+}
+
+.projetos-caixa {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.projetos-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.projetos-card:hover {
+    box-shadow: 0 10px 20px rgba(79, 70, 229, 0.3);
+    transform: translateY(-10px) scale(1.03);
+}
+
+.projetos-imagem {
+    height: 250px;
+    width: 100%;
+    object-fit: cover; /*imagem se enquadra aos tamanhos selecionados*/
+}
+
+.titulo-projetos {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 3rem;
+}
+
+.info-projetos {
+    margin-bottom: 5px;
+}
+
+.projetos-paragrafo {
+    color: rgba(226, 232, 240, 0.8);
+    line-height: 1.25rem; /*altura da linha*/
+}
+
+.caixa-projetos {
+    padding: 1.5rem;
+}
+
+/*SESSÃO DE CONTATO.............*/
+
+.contato {
+ padding: 6rem 2rem;
+}
+
+.titulo-contato {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 3rem;
+}
+
+.formulario-contato {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.camp-form {
+    width: 100%;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    outline: none;
+    color: #e2e8f0;
+}
+
+.camp-form:focus { /* quando der um foco nele, vai fazer algo*/
+    border: 1px solid #7c3aed;
+    box-shadow: 0 0 10px rgba(79, 70, 229, 0.3);
+}
+
+.grupo-form {
+    margin-bottom: 1.5rem;
+}
+
+.botao-contato {
+    width: 100%;
+    padding: 1rem 2rem;
+    background: linear-gradient(45deg, #4f46e5, #7c3aed);
+    border: none;
+    border-radius: 16px;
+    color: #e2e8f0;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.botao-contato:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 5px 15px rgba(79, 70, 229, 0.4) ;
+}
+
+/*EFEITO SOMBRA LATERAL DE FUNDO...............*/
+
+.particulas {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1; /*define quem fica atras oua frente -1 ( atras )*/
+    opacity: 0.5;
+    background:
+     radial-gradient(circle at 10% 20%, #4f46e5 0%, transparent 20%),
+     radial-gradient(circle at 90% 80%, #7c3aed 0%, transparent 20%),
+     #0a0f1c;
+}
+
+/*ANIMAÇÃO DA FOTO DE PERFIL...........*/
+
+@keyframes flutuar {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
