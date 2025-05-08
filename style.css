@@ -260,3 +260,48 @@ h1 {
         transform: translateY(-20px);
     }
 }
+
+@media screen and (max-width:700px) {
+    .foto-perfil {
+        width: 250px;
+        height: auto;
+    }
+
+    .menu {
+        gap: 20px;
+        align-items: center;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .sub-titulo {
+        font-size: 1.2rem;
+    }
+
+    .sobre-titulo {
+        font-size: 2.5rem;
+    }
+
+    .sobre-caixa {
+        max-width: 250px;
+    }
+
+    .sobre-paragrafo {
+        font-size: 1rem;
+    }
+
+    .titulo-projetos {
+        font-size: 2.5rem;
+    }
+
+    .projetos-card {
+        max-width: 250px;
+        margin: 0 auto;
+    }
+
+    .formulario-contato {
+        max-width: 260px;
+    }
+}
