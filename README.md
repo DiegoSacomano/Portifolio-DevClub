@@ -9,3 +9,5 @@
 <br/>
 <p>algumas imagens a baixo:</p>
 <img src="https://github.com/DiegoSacomano/Portifolio-DevClub/blob/6e474ff095a49213441486d18445d4072bc43313/img/minha-img.png?raw=true" alt="minha-img"/>
+<br/>
+<img src="https://github.com/DiegoSacomano/Portifolio-DevClub/blob/6e474ff095a49213441486d18445d4072bc43313/img/meus-projetos.png?raw=true" alt="meus-projetos"/>
