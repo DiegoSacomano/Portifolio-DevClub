@@ -66,7 +66,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+
+}
+
+.main-cabecalho {
+    text-align: center;
 }
 
 .foto-perfil {
@@ -110,9 +114,7 @@ h1 {
    padding: 1rem;
    margin: 0 auto; /*centraliza a caixa do texto*/
    border-radius: 10px;
-   border: 1px solid rgba(255, 255, 255, 0.1);
    backdrop-filter: blur(10px); /*efeito esfumaçado*/
-   background: rgba(255, 255, 255, 0.05);
 }
 
 .sobre-paragrafo {
@@ -125,6 +127,7 @@ h1 {
 
 .projetos {
     padding: 6rem 2rem;
+    position: relative;
 }
 
 .projetos-caixa {
@@ -169,10 +172,54 @@ h1 {
 .projetos-paragrafo {
     color: rgba(226, 232, 240, 0.8);
     line-height: 1.25rem; /*altura da linha*/
+    margin-bottom: 20px;
 }
 
 .caixa-projetos {
     padding: 1.5rem;
+}
+
+.link {
+    position: absolute;
+    bottom: 5px;
+    color: blue;
+    font-weight: bold;
+}
+
+.link a {
+    text-decoration: none;
+}
+
+.showProjects {
+    position: absolute;
+    bottom: 0;
+    left: 85%;
+    cursor: pointer;
+    border: none;
+    padding: 5px;
+    border-radius: 7px;
+    font-weight: bold;
+    font-size: 1rem;
+    background: transparent;
+}
+
+.showProjects:hover {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 10px rgba(79, 70, 229, 0.3);
+}
+
+.hideProjects {
+    position: absolute;
+    bottom: 0;
+    left: 85%;
+    cursor: pointer;
+    border: none;
+    padding: 5px;
+    border-radius: 7px;
+    font-weight: bold;
+    font-size: 1rem;
+    background: transparent;
+    display: none;
 }
 
 /*SESSÃO DE CONTATO.............*/
@@ -305,5 +352,9 @@ h1 {
     .formulario-contato {
         max-width: 100%;
         padding: 1rem;
+    }
+
+    .cabecalho {
+        flex-wrap: wrap;
     }
 }
